@@ -31,3 +31,9 @@ Followed two main tutorials for setting up the application.
   npm eject
     Removes this tool and copies build dependencies, configuration files
     and scripts into the app directory. If you do this, you can’t go back!
+
+## Pulling the repo
+
+1. In the root directory: 'npm install'
+
+2. 'cd client && npm install'
