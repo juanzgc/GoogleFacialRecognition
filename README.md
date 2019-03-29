@@ -37,3 +37,7 @@ Followed two main tutorials for setting up the application.
 1. In the root directory: 'npm install'
 
 2. 'cd client && npm install'
+
+## Adding an npm package
+
+Unless necessary in both the server and the client, 'cd client' & then 'npm install [package_name]'
