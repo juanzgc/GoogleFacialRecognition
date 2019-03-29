@@ -11,7 +11,7 @@ React is chosen as the technology stack of Google Facial Recognition.
 Angular has been considered. Due to the complexity of the structures (Injectables,
 Components, Pipes, Modules, etc.), we decide to use React.
 
-Rationale of using React
+Rationales of using React
 Several features of React makes it the efficient technology stack for Google Facial 
 Recognition prototype assignment (TechMagic, "React vs. Angular vs Vue.js -- What to 
 Choose in 2019," 2018):
@@ -23,19 +23,19 @@ Choose in 2019," 2018):
 Considering the Google Facial Application's functions and developers' availability,
 we use React for the corresponding reasons:
     a. Easier for new developers' to learn 
-    b. Large quantity of images/addresses are queued for API calls
-    c. The need to build and serve an application from the server when user requets a page
+    b. A large quantity of images/addresses is queued for API calls
+    c. The need to build and serve an application from the server when user requests a page
     d. Friendly to new software developers. The code only accesses the memory location 
        it is authorized.
     e. Efficient for future development and maintenance
 
-Rationale of not using Angular 
+Rationales of not using Angular 
 Angular as a JavaScript MVVM framework has many benefits of for building highly interactive
-web application. However, we decided not to use it because of the feature of variety of 
+web applications. However, we decided not to use it because of the feature of the variety of 
 different structures. It is harder for new developers to learn in comparison with React in
 a short span of assignment time (one week). It also has relatively slower performance. 
 Comparing to React, Angular is less accommodated with the application function of queuing 
-and processing large quantity of API calls.
+and processing a large quantity of API calls.
 
 Reference:
 TechMagic. (2018, March 16). "React vs. Angular vs Vue.js -- What to Choose in 2019." Medium.com. 
