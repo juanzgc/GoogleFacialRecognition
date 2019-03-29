@@ -82,7 +82,7 @@ class Home extends Component {
 
   render() {
     const ImageLoader = () => (
-      <div>
+      <div style={{marginTop: 20, marginBottom: 20}}>
         <ImageGrid data={this.state.data} />
         <Button disabled={(this.state.count > 9) ? true : false } variant="contained" onClick={this.getMoreData}>Load More</Button>
       </div>
@@ -124,7 +124,7 @@ class Home extends Component {
         </Card.Content>
       </Card>
       </div>
-      <div id="imageData">
+      <div id="imageData" style={{marginTop: 20, marginBottom: 20}}>
       {
         this.state.data ? <ImageLoader /> : null 
       }

@@ -2,6 +2,8 @@
 
 ## By Juan Zapata Gomez, Hung-Yi Chang, Xiaoyi Zhou, Mahao Yi, Xuanting Chen
 
+Section A6, Group 2
+
 ## Express Proxy
 
 - Added proxy for api calls in client/package.json
