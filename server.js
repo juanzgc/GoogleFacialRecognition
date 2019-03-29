@@ -31,13 +31,16 @@ app.post('/api/postName', (req, res) => {
   console.log("POST: postName");
   var name = req.body.name;
   const key = process.env.REACT_APP_GSE;
+  console.log("Start: ", req.body.start)
 
   var options = {
     uri: 'https://www.googleapis.com/customsearch/v1',
     qs: {
-      cx: process.env.REACT_APP_GSE_ID,
+      cx: process.env.REACT_APP_GSE_ID_2,
       q: name,
-      key: process.env.REACT_APP_GSE
+      key: process.env.REACT_APP_GSE_2,
+      searchType: "image",
+      start: req.body.start
     }
   }
   rp(options)

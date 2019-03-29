@@ -6,6 +6,7 @@ import '../styles/Home.css'
 
 import { Card, Image as Image2 } from 'semantic-ui-react'
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 import ImageGrid from '../components/ImageGrid'
 
@@ -18,10 +19,12 @@ class Home extends Component {
 
     this.state = {
       name: undefined,
-      data: undefined
+      data: undefined,
+      count: 1
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.getMoreData = this.getMoreData.bind(this);
   }
 
 
@@ -29,16 +32,17 @@ class Home extends Component {
     this.setState({
       [name]: event.target.value,
     });
+    this.setState({count: 1})
   };
 
   handleSubmit(event) {
     // alert('Name: ' + this.state.name + ', submitted');
     event.preventDefault();
-
     fetch('/api/postName', {
       method: "POST",
       body: JSON.stringify({
-        name: this.state.name
+        name: this.state.name,
+        start: 1
       }),
       headers: {
         'Content-Type': 'application/json'
@@ -46,12 +50,43 @@ class Home extends Component {
     })
     .then(response => response.json())
     .then(data => {
-      alert("Data returned from Google");
-      this.setState({data: data});
+      // alert("Data returned from Google");
+      this.setState({data: data.items})
+      // this.setState({data: data});
+      const element = document.getElementById('imageData');
+      console.log(element);
+      element.scrollIntoView({behavior: 'smooth'})
+    })
+  }
+
+  getMoreData(event) {
+    this.setState({count: this.state.count+1})
+    event.preventDefault();
+    fetch('/api/postName', {
+      method: "POST",
+      body: JSON.stringify({
+        name: this.state.name,
+        start: this.state.data.length + 1
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    })
+    .then(response => response.json())
+    .then(data => {
+      // alert("Data returned from Google");
+      this.setState({data: [...this.state.data, ...data.items]})
+      console.log("new data: ", this.state.data);
     })
   }
 
   render() {
+    const ImageLoader = () => (
+      <div>
+        <ImageGrid data={this.state.data} />
+        <Button disabled={(this.state.count > 9) ? true : false } variant="contained" onClick={this.getMoreData}>Load More</Button>
+      </div>
+    )
 
     return (
     <div className="App">
@@ -89,10 +124,11 @@ class Home extends Component {
         </Card.Content>
       </Card>
       </div>
-
+      <div id="imageData">
       {
-        this.state.data ? <ImageGrid data={this.state.data} /> : null 
+        this.state.data ? <ImageLoader /> : null 
       }
+      </div>
 
     </div>
     );

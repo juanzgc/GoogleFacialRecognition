@@ -16,12 +16,12 @@ class ImageGrid extends Component {
       // <div>
       //   <h1>Hello</h1>
       // </div>
-      <div className={styles.root}>
+      <div className='imageData' style={styles.root}>
         <GridList cellHeight={200} className={styles.GridList} cols={3}>
           {
-            data.items.map(item => (
+            data.map(item => (
               <GridListTile key={item.title} cols={1}>
-                <img src={item.pagemap.cse_image[0].src} atl={item.title} />
+                <img src={item.link} atl={item.title} />
               </GridListTile>
             ))
           }
