@@ -59,7 +59,7 @@ Project Assignment 1: Primary Proposal
 
 
 
-Secondary Proposal (Informal)
+Secondary Proposal (Informal, not approved)
 ====
 
 · Project Title
