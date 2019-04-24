@@ -1,4 +1,4 @@
-Assignment 2: User Stories
+Project Assignment 2: User Stories
 ====
 
 Members:
