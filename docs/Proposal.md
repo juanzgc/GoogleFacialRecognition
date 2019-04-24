@@ -29,19 +29,22 @@ Primary Proposal (Formal)
 ----
 	a. Data sets via APIs
 		1) undefined
-		2) Google Custom Search Engine
+		2) [Google Custom Search Engine](https://cse.google.com/cse/)
 		   https://github.com/vadimdemedes/google-images
-		   https://cse.google.com/cse/ 
 		   (returns images based on customers full name)
 		   Show a paginated result of images returned that match with the image detection 
 		   software.
+		   
     b. Front End & Back End
 		1) Back end with Google Firebase (Datastore) and ExpressJs
 		2) Front end: NodeJS with ReactJS, Bootstrap
+		
     c. Database
        undefined
+       
     d. Third-Party Authentication
        undefined
+       
     e. Application Features
 	  	-Authentication (Username and Password)
   		-After returning the results of images from API calls, the application will 
@@ -50,7 +53,7 @@ Primary Proposal (Formal)
   		-Return the link where the disproved pictures may be found to users.
   		-Users are asked to upload image to compare with images returned from Custom 
   	 	 Search Engine API.
-    	-Sign Up/Sign In to save images of the user in database.
+ 	   	-Sign Up/Sign In to save images of the user in database.
   		-Allows users to return to old searches.
   		-Allows users for quicker use of our service
 
@@ -74,16 +77,16 @@ Secondary Proposal (Informal)
 · Table of Content 
 ----
 	a. Data sets via APIs
-		1) Can I Eat It? Barcode API 
-		https://www.programmableweb.com/api/can-i-eat-it-barcode 
+	
+		1) [Can I Eat It? Barcode API](https://www.programmableweb.com/api/can-i-eat-it-barcode) 
 			-Product search by name
 			-Product search by barcode
 			-Basic Product information
 			-Detailed Nutritional Data
 			-Allergen Lists
 			-Vegan, Vegetarian, Fairtrade status
-		2) Moves API 
-		https://www.programmableweb.com/api/moves 
+			
+		2) [Moves API](https://www.programmableweb.com/api/moves)
 			- Moves is an application for mobile phones that allows users to automatically 
 			record their movements throughout the day. Moves uses data and sensors from 
 			smart phones to record how much the user moves throughout the day. The Moves 
