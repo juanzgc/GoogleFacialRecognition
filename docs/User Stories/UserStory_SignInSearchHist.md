@@ -4,7 +4,7 @@ For users who want to save all their previous searches, sign up/sign in is neede
 
 User stories:
 ----
-As a user, I want to log in to the App so that I can find all my search histories.
+As a user, I want to log in to the App so that I can find all my search histories, access my profile, and my uploaded pictures.
 	
 
 
