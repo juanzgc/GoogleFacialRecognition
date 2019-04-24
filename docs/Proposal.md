@@ -7,18 +7,18 @@ Primary Proposal (Formal)
 
 · Project Team Members
 ----
-  Juan Zapata-Gomez
-  Hung-Yi Chang
-  Xiaoyi Zhou
-  Mohao Yi
-  Xuanting Chen
+  Juan Zapata-Gomez;
+  Hung-Yi Chang;
+  Xiaoyi Zhou;
+  Mohao Yi;
+  Xuanting Chen.
 
 · Project Goal
 ----
   To instruct users to delete all negative pictures that may potentially affect their 
   career opportunity and public figure. 
 
-· Uage Description 
+· Usage Description 
 ----
   To use the google custom search engine, users are asked to input their names. Correctly 
   positioned face pictures of users need to be added to database. The facial recognition 
@@ -67,7 +67,7 @@ Secondary Proposal (Informal)
 ----
   Based on users’ daily amount of movement recorded by phone, the application will calculate recommended amount of nutrition the user should get from food. 
 
-· Uage Description 
+· Usage Description 
 ----
   When users scan a barcode of food item, the application should display information of nutrition and inform user whether this food item is recommended. The application also builds a profile for user’s long term health goal and allergic information.
 
