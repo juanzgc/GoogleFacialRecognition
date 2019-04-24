@@ -1,4 +1,4 @@
-Primary Proposal (Formal)
+Project Assignment 1 Primary Proposal
 ====
 · Project Title
 ----
