@@ -153,7 +153,56 @@ class Home extends Component {
       })
       .then(response => response.json())
       .then(data => {
-
+        
+        Promise.all(
+          data.items.map(img => {
+            return new Promise((resolve, reject) => {
+              unirest.post("https://kairosapi-karios-v1.p.rapidapi.com/recognize")
+              .header("X-RapidAPI-Host", "kairosapi-karios-v1.p.rapidapi.com")
+              .header("X-RapidAPI-Key", "139f1bfd55msha539592df3ee41dp1c0f85jsn5b87d99d6514")
+              .header("Content-Type", "application/json")
+              .send({"image":img.link,"gallery_name":galleryName})
+              .end(function (result) {
+                console.log(result.body);
+                // result.body.images
+                let isRecognition = false;
+                if (result.body.images) {
+                  result.body.images.forEach(face => {
+                    if (face.transaction.status === "success") {
+                      console.log("Success got a match");
+                      isRecognition = true;
+                      let result = {
+                        link: img.link,
+                        title: img.title,
+                        isRecognition: isRecognition
+                      }
+                      resolve(result);
+                    }
+                  })
+                  console.log(isRecognition);
+                }
+                // Either no faces in the image or not a match
+                console.log("going to resolve, no face detection");
+                resolve({
+                  link: img.link,
+                  title: img.title,
+                  isRecognition: false
+                })
+              });
+            })
+          })
+        ).then(newData => {
+          console.log("Done with all promises: ", newData);
+          prevThis.setState({data: newData})
+          // this.setState({data: data});
+          const element = document.getElementById('imageData');
+          console.log(element);
+          element.scrollIntoView({behavior: 'smooth'})
+          prevThis.setState({loading: false})
+        })
+        
+        
+        /*
         let newData = data.items.map(elem => {
           console.log(elem);
           function checkFaces(fn) {
@@ -189,14 +238,15 @@ class Home extends Component {
             return results;
           })
         })
-        console.log(newData);
-        // console.log(data);
+        
+
+        
         prevThis.setState({data: data.items})
-        // this.setState({data: data});
         const element = document.getElementById('imageData');
         console.log(element);
         element.scrollIntoView({behavior: 'smooth'})
         prevThis.setState({loading: false})
+        */
       })
     });
 
