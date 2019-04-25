@@ -14,6 +14,8 @@ import ImageGrid from '../components/ImageGrid'
 import unirest from 'unirest';
 import uuidv1 from 'uuid/v1';
 
+import key from '../Hidden/hidden';
+
 // background color: #2695d5
 
 class Home extends Component {
@@ -134,7 +136,7 @@ class Home extends Component {
     // Enrolls the face into the Kairos Face Recognition
     unirest.post("https://kairosapi-karios-v1.p.rapidapi.com/enroll")
     .header("X-RapidAPI-Host", "kairosapi-karios-v1.p.rapidapi.com")
-    .header("X-RapidAPI-Key", "139f1bfd55msha539592df3ee41dp1c0f85jsn5b87d99d6514")
+    .header("X-RapidAPI-Key", key)
     .header("Content-Type", "application/json")
     .send({"image":this.state.imgUrl,"gallery_name":galleryName,"subject_id":galleryName})
     .end(function (result) {
@@ -159,7 +161,7 @@ class Home extends Component {
             return new Promise((resolve, reject) => {
               unirest.post("https://kairosapi-karios-v1.p.rapidapi.com/recognize")
               .header("X-RapidAPI-Host", "kairosapi-karios-v1.p.rapidapi.com")
-              .header("X-RapidAPI-Key", "139f1bfd55msha539592df3ee41dp1c0f85jsn5b87d99d6514")
+              .header("X-RapidAPI-Key", key)
               .header("Content-Type", "application/json")
               .send({"image":img.link,"gallery_name":galleryName})
               .end(function (result) {
