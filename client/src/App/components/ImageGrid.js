@@ -11,8 +11,8 @@ class ImageGrid extends Component {
 
   render() {
     var {data} = this.props;
-    const noRec = "No Detection Found";
-    const rec = "Successful Detection";
+    const noRec = "No Match Found";
+    const rec = "Successful Match";
     console.log(data);
     return (
       // <div>
