@@ -1,3 +1,7 @@
 .center {
   display: inline-block
 }
+
+.html-input-hide {
+  display: none;
+}
