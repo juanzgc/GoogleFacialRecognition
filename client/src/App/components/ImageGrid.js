@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
+import GridListTileBar from '@material-ui/core/GridListTileBar';
 
 class ImageGrid extends Component {
   // constructor(props) {
@@ -10,7 +11,8 @@ class ImageGrid extends Component {
 
   render() {
     var {data} = this.props;
-
+    const noRec = "No Detection Found";
+    const rec = "Successful Detection";
     console.log(data);
     return (
       // <div>
@@ -22,6 +24,10 @@ class ImageGrid extends Component {
             data.map(item => (
               <GridListTile key={item.title} cols={1}>
                 <img src={item.link} atl={item.title} />
+                <GridListTileBar
+                  title={item.isRecognition ? rec : noRec}
+                  style={{background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)'}}
+                />
               </GridListTile>
             ))
           }
