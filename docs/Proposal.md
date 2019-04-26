@@ -28,7 +28,8 @@ Project Assignment 1: Primary Proposal
 · Table of Content 
 ----
 	a. Data sets via APIs
-		1) undefined
+		1) [Kairo](https://www.kairos.com/)
+		   Face recognition API
 		2) [Google Custom Search Engine](https://cse.google.com/cse/)
 		   https://github.com/vadimdemedes/google-images
 		   (returns images based on customers full name)
@@ -40,11 +41,8 @@ Project Assignment 1: Primary Proposal
 		2) Front end: NodeJS with ReactJS, Bootstrap
 		
     c. Database
-       undefined
-       
-    d. Third-Party Authentication
-       undefined
-       
+       Users' images are stored in Kairo database
+      
     e. Application Features
 	  	-Authentication (Username and Password)
   		-After returning the results of images from API calls, the application will 
