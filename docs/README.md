@@ -23,7 +23,7 @@ Project Assignment 1: Primary Proposal
   To use the google custom search engine, users are asked to input their names. Correctly 
   positioned face pictures of users need to be added to database. The facial recognition 
   software will match pictures from the google custom search engine to find all public 
-  images that potential employers may find when searching the names of the users.
+  images that potential employers may find when searching names of the users.
 
 · Table of Content 
 ----
