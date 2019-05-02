@@ -44,7 +44,6 @@ Project Assignment 1: Primary Proposal
        Users' images are stored in Kairo database
       
     e. Application Features
-	  	-Authentication (Username and Password)
   		-After returning the results of images from API calls, the application will 
    	 	 recommend ways to have the picture deleted if users disprove the image returned 
    	 	 from the Google Custom Search Engine.
